@@ -1,0 +1,179 @@
+html {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: burlywood;
+    overflow-x: hidden;
+}
+
+body {
+    margin: 0;
+}
+
+/* ------------------------------------------------
+
+
+                        HEADER
+
+
+---------------------------------------------------*/
+
+
+header {
+    background: rgb(55, 75, 74);
+    background: linear-gradient(90deg, rgba(55, 75, 74, 1) 0%, rgba(82, 103, 96, 1) 61%);
+    padding: 1rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logoContainer {
+    display: flex;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    line-height: 1.3rem;
+    padding: 1rem 0;
+    color: white;
+}
+
+.logo a {
+    padding: 0;
+    text-decoration: none;
+    color: inherit;
+    font-size: 2.5rem;
+}
+
+.logo h3 {
+    margin: 0;
+    padding: 0;
+}
+
+.pages nav {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: nowrap;
+}
+
+
+.pages a {
+    text-decoration: none;
+    background-color: aliceblue;
+    padding: 0.5rem 1.5rem;
+    border-radius: 5px;
+    color: inherit;
+    text-wrap: nowrap;
+}
+
+
+/* ------------------------------------------------
+
+
+                        BODY
+
+
+---------------------------------------------------*/
+
+
+main {
+    padding: 2rem 1rem;
+    background-image: url("https://www.nultylighting.co.uk/wp-content/uploads/2022/03/uae-pavilion-dubai-expo-2020-banner.jpg");
+    background-color: black;
+    display: grid;
+}
+
+article:nth-of-type(1) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+article:nth-of-type(1)>h1 {
+    font-size: 54px;
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: white;
+    border: gray;
+}
+
+article>div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+article>div>p {
+    max-width: 75ch;
+    text-align: center;
+    color: white;
+}
+
+
+
+/* ------------------------------------------------
+
+
+                        FOOTER
+
+
+---------------------------------------------------*/
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.footer-links {
+    margin-top: 1rem;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 1rem;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.footer-social {
+    margin-top: 1rem;
+}
+
+.footer-social a {
+    color: white;
+    text-decoration: none;
+    margin: 0 0.5rem;
+}
+
+.footer-social a:hover {
+    text-decoration: underline;
+}
+
+@media (width <=768px) {
+    header {
+        flex-direction: column;
+        align-items: normal;
+    }
+
+    .pages nav {
+        justify-content: space-around;
+        gap: 0rem;
+    }
+
+    .pages a {
+        padding: 0.5rem 1.75rem;
+    }
+}
