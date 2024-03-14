@@ -2,6 +2,10 @@ html {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background-color: burlywood;
     overflow-x: hidden;
+
+    ::-webkit-scrollbar {
+        display: none;
+    }
 }
 
 body {
@@ -171,9 +175,5 @@ footer {
     .pages nav {
         justify-content: space-around;
         gap: 0rem;
-    }
-
-    .pages a {
-        padding: 0.5rem 1.75rem;
     }
 }
