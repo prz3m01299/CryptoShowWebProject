@@ -9,7 +9,7 @@
     <link
       rel="stylesheet"
       href="style.css" />
-    <script src="/index.js"></script>
+    <script src="index.js"></script>
   </head>
   <body>
     <header>
@@ -21,10 +21,10 @@
       </div>
       <div class="pages">
         <nav>
-          <a href="../AboutPage/about.html">About</a>
-          <a href="#Register">Register</a>
-          <a href="#Signup">Sign up</a>
-          <a href="#Login">Login</a>
+          <a href="../AboutPage/about.html">ABOUT</a>
+          <a href="../RegisterPage/register.html">REGISTER</a>
+          <a href="#Signup">SIGN UP</a>
+          <a href="#Login">LOGIN</a>
         </nav>
       </div>
     </header>
@@ -43,21 +43,25 @@
 
         <section class="countDown">
           <div>
-            <p>July</p>
-            <p>28</p>
+            <p>March</p>
+            <p>26</p>
             <p>14:00</p>
           </div>
           <span class="timeTiles">
             <div class="individualTiles">
-              <div>4</div>
-              <div>2</div>
+              <div id="daysTens">0</div>
+              <div id="daysOnes">0</div>
               <p>:</p>
-              <div>1</div>
-              <div>6</div>
+              <div id="hoursTens">0</div>
+              <div id="hoursOnes">0</div>
+              <p>:</p>
+              <div id="minutesTens">0</div>
+              <div id="minutesOnes">0</div>
             </div>
-            <div>
+            <div class="tilesSubs">
               <p>DAYS</p>
               <p>HOURS</p>
+              <p>MINUTES</p>
             </div>
           </span>
           <button>FIND OUT MORE</button>
