@@ -21,13 +21,21 @@ body {
 ---------------------------------------------------*/
 
 
-header {
+/* header {
     background: rgb(62, 62, 62);
     background: linear-gradient(90deg, rgb(45, 71, 69) 0%, rgb(62, 62, 62) 61%);
     padding: 1rem 1.5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+} */
+
+header {
+    background: rgb(62, 62, 62);
+    background: linear-gradient(90deg, rgb(45, 71, 69) 0%, rgb(62, 62, 62) 61%);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
 }
 
 
@@ -45,40 +53,51 @@ header {
     color: white;
 }
 
-.logo a {
-    padding: 0;
+.logo a:nth-of-type(1) {
+    /* padding: 0; */
     text-decoration: none;
     color: rgb(255, 239, 239);
     font-size: 2.5rem;
 }
 
-.logo h3 {
-    margin: 0;
-    padding: 0;
-    letter-spacing: 8px;
+.logo>a:nth-last-of-type(1) {
+    text-decoration: none;
+    letter-spacing: 0.5rem;
+    color: rgb(255, 239, 239);
 }
 
-.pages nav {
+/* .pages>nav {
     display: flex;
-    gap: 2rem;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.5rem;
     text-wrap: nowrap;
+} */
+
+.pages>nav {
+    display: flex;
+    justify-content: space-between;
+    text-wrap: nowrap;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    text-align: center;
 }
 
 .pages a {
+    flex-grow: 1;
     text-decoration: none;
-    background-color: rgb(44, 47, 53);
-    padding: 0.5rem 1.5rem;
+    background-color: rgb(59, 83, 80);
+    padding: 0.5rem;
     border-radius: 5px;
-    color: rgb(155, 194, 228);
+    color: rgb(187, 187, 187);
     text-wrap: nowrap;
-    letter-spacing: 2px;
-    transition: background-color 400ms, scale 400ms;
+    letter-spacing: 0.1rem;
+    transition: background-color 400ms, transform 400ms;
 }
 
 .pages a:hover {
-    background-color: rgb(115, 182, 236);
-    scale: 1.15;
-
+    background-color: rgb(81, 104, 102);
+    transform: scale(1.15);
 }
 
 
@@ -92,42 +111,47 @@ header {
 
 
 main {
-    padding: 2rem 1rem;
+    padding: 2rem 0.5rem;
     background-image: url("https://www.bundesjustizamt.de/SharedDocs/Bilder/DE/ZentraleRegister/Zentrale_Register_Buehne.jpg?__blob=normal&v=6");
     background-repeat: no-repeat;
     background-color: black;
     background-size: cover;
-    display: grid;
-    gap: 1rem;
-    justify-items: center;
-    /* backdrop-filter: blur(100px); */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .registerContainer {
     background-color: rgba(73, 73, 73, 0.5);
     border-radius: 24px;
-    padding: 0.5rem 1rem;
+    padding: 1rem;
     max-width: 80ch;
-    width: 90%;
+    backdrop-filter: blur(8px);
 }
 
 .registerForm {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
     border-radius: 10px;
-    padding: 0.5rem 1rem;
+    /* padding: 0.5rem 1rem; */
+}
+
+.imageContainer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
 }
 
 #userImg {
-    width: 10em;
+    width: 6em;
 }
 
 #passwordIcon {
     width: 24px;
     transition: scale 200ms;
-
 }
 
 #passwordIcon:hover {
@@ -141,20 +165,18 @@ main {
 
 .registerForm h3~div {
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     padding: 0.5rem 1rem;
     border-radius: 24px;
     margin: 0.5rem 0;
-    width: 70%;
+    /* width: 90%; */
     background-color: rgba(70, 70, 70, 0.7);
 }
 
 .registerForm>h3 {
-    font-size: 64px;
-    letter-spacing: 0.25rem;
-    font-weight: 600;
+    font-size: 3rem;
+    letter-spacing: 0.5rem;
     color: blanchedalmond;
-    /* -webkit-text-stroke: 1px rgb(41, 41, 41); */
     margin-top: auto;
     text-align: center;
 }
@@ -177,7 +199,7 @@ input {
     /* padding: 0rem; */
     border-radius: 34px;
     margin: 2em 0;
-    width: 70%;
+    /* width: 70%; */
     background-color: rgba(55, 75, 74, 1);
     transition: background-color 400ms;
 }
@@ -258,7 +280,7 @@ footer {
 
 ---------------------------------------*/
 
-@media (width <=768px) {
+/* @media (width <=768px) {
     header {
         flex-direction: column;
         align-items: normal;
@@ -277,4 +299,4 @@ footer {
         font-size: 1.25rem;
     }
 
-}
+} */
