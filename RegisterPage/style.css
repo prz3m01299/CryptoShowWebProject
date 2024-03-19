@@ -20,6 +20,16 @@ body {
 
 ---------------------------------------------------*/
 
+
+/* header {
+    background: rgb(62, 62, 62);
+    background: linear-gradient(90deg, rgb(45, 71, 69) 0%, rgb(62, 62, 62) 61%);
+    padding: 1rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+} */
+
 header {
     background: rgb(62, 62, 62);
     background: linear-gradient(90deg, rgb(45, 71, 69) 0%, rgb(62, 62, 62) 61%);
@@ -44,6 +54,7 @@ header {
 }
 
 .logo a:nth-of-type(1) {
+    /* padding: 0; */
     text-decoration: none;
     color: rgb(255, 239, 239);
     font-size: 2.5rem;
@@ -89,9 +100,6 @@ header {
     transform: scale(1.15);
 }
 
-:active {
-    background-color: white;
-}
 
 /* ------------------------------------------------
 
@@ -103,46 +111,113 @@ header {
 
 
 main {
-    padding: 2rem 1rem;
-    background-image: url("https://www.nultylighting.co.uk/wp-content/uploads/2022/03/uae-pavilion-dubai-expo-2020-banner.jpg");
+    padding: 2rem 0.5rem;
+    background-image: url("https://www.bundesjustizamt.de/SharedDocs/Bilder/DE/ZentraleRegister/Zentrale_Register_Buehne.jpg?__blob=normal&v=6");
+    background-repeat: no-repeat;
     background-color: black;
-}
-
-article:nth-of-type(1) {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-/* rgb(62, 62, 62)  */
-article:nth-of-type(1)>h1 {
-    font-size: 4em;
-    text-align: center;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color: rgb(217, 217, 217);
-    border: gray;
-}
-
-article>div {
+    background-size: cover;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-radius: 8px;
-    background-color: rgb(51, 51, 51, 80%);
-    /* width: 70%; */
-    margin: 0 auto;
 }
 
-article>div>p {
-    max-width: 65ch;
-    line-height: 1.75;
-    text-align: center;
-    color: rgb(201, 199, 199);
-    font-size: 1.5rem;
-    font-weight: 400;
-    margin: 1.5rem;
+.registerContainer {
+    background-color: rgba(73, 73, 73, 0.5);
+    border-radius: 24px;
+    padding: 1rem;
+    max-width: 80ch;
+    backdrop-filter: blur(8px);
+}
 
+.registerForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    border-radius: 10px;
+    padding: 0.5rem 0rem;
+}
+
+.imageContainer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+#userImg {
+    width: 6em;
+}
+
+#passwordIcon {
+    width: 24px;
+    transition: scale 200ms;
+}
+
+#passwordIcon:hover {
+    filter: brightness(1.2);
+    scale: 1.1;
+}
+
+#passwordIcon:active {
+    scale: 1.4;
+}
+
+.registerForm h3~div {
+    display: flex;
+    /* align-items: center; */
+    padding: 0.5rem 1rem;
+    border-radius: 24px;
+    margin: 0.5rem 0;
+    background-color: rgba(70, 70, 70, 0.7);
+}
+
+.registerForm>h3 {
+    font-size: 2rem;
+    letter-spacing: 0.5rem;
+    color: blanchedalmond;
+    margin-top: auto;
+    text-align: center;
+}
+
+input {
+    border: none;
+    width: 100%;
+    height: 100%;
+    margin: 0 0.5rem;
+    outline: none;
+    background-color: transparent;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.registerForm>div:nth-last-of-type(1) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding: 0rem; */
+    border-radius: 34px;
+    margin: 2em 0;
+    /* width: 70%; */
+    background-color: rgba(55, 75, 74, 1);
+    transition: background-color 400ms;
+}
+
+.registerForm button {
+    border: none;
+    font-size: 1em;
+    font-weight: bold;
+    letter-spacing: 0.5rem;
+    width: 100%;
+    height: 100%;
+    color: azure;
+    padding: 0.75rem 0;
+    background-color: transparent;
+    transition: background-color 300ms;
+}
+
+.registerForm div:nth-last-of-type(1):hover {
+    background-color: rgb(80, 118, 117);
 }
 
 
@@ -196,14 +271,27 @@ footer {
 }
 
 
-/* -----------------------------
+/*--------------------------------------
 
 
-          MEDIA QUERIES 
-        
-        
-------------------------------*/
+             MEDIA QUERIES
 
+
+---------------------------------------*/
+
+@media (width >=600px) {
+    #userImg {
+        width: 8em;
+    }
+
+    .registerForm {
+        padding: 0 2rem;
+    }
+
+    .registerForm h3~div {
+        max-width: 50ch;
+    }
+}
 
 
 @media (width >=768px) {
@@ -224,14 +312,11 @@ footer {
     .pages {
         flex-grow: 1;
     }
-
-    article:nth-of-type(1)>h1 {
-        font-size: 8rem;
-    }
 }
 
-/*
-@media (width <=768px) {
+
+
+/* @media (width <=768px) {
     header {
         flex-direction: column;
         align-items: normal;
@@ -242,8 +327,12 @@ footer {
         gap: 0rem;
     }
 
-    article:nth-of-type(1)>h1 {
-        font-size: 6rem;
+    .registerForm>h3 {
+        font-size: 56px;
     }
-}
-*/
+
+    input {
+        font-size: 1.25rem;
+    }
+
+} */
