@@ -136,7 +136,7 @@ main {
     justify-content: center;
     /* align-items: center; */
     border-radius: 10px;
-    /* padding: 0.5rem 1rem; */
+    padding: 0.5rem 0rem;
 }
 
 .imageContainer {
@@ -169,12 +169,11 @@ main {
     padding: 0.5rem 1rem;
     border-radius: 24px;
     margin: 0.5rem 0;
-    /* width: 90%; */
     background-color: rgba(70, 70, 70, 0.7);
 }
 
 .registerForm>h3 {
-    font-size: 3rem;
+    font-size: 2rem;
     letter-spacing: 0.5rem;
     color: blanchedalmond;
     margin-top: auto;
@@ -279,6 +278,43 @@ footer {
 
 
 ---------------------------------------*/
+
+@media (width >=600px) {
+    #userImg {
+        width: 8em;
+    }
+
+    .registerForm {
+        padding: 0 2rem;
+    }
+
+    .registerForm h3~div {
+        max-width: 50ch;
+    }
+}
+
+
+@media (width >=768px) {
+    header {
+        background: rgb(62, 62, 62);
+        background: linear-gradient(90deg, rgb(45, 71, 69) 0%, rgb(62, 62, 62) 61%);
+        padding: 1rem 1.5rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logoContainer {
+        flex-grow: 3;
+    }
+
+    .pages {
+        flex-grow: 1;
+    }
+}
+
+
 
 /* @media (width <=768px) {
     header {

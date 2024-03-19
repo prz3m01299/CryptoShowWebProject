@@ -196,6 +196,40 @@ footer {
 }
 
 
+/* -----------------------------
+
+
+          MEDIA QUERIES 
+        
+        
+------------------------------*/
+
+
+
+@media (width >=768px) {
+    header {
+        background: rgb(62, 62, 62);
+        background: linear-gradient(90deg, rgb(45, 71, 69) 0%, rgb(62, 62, 62) 61%);
+        padding: 1rem 1.5rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logoContainer {
+        flex-grow: 3;
+    }
+
+    .pages {
+        flex-grow: 1;
+    }
+
+    article:nth-of-type(1)>h1 {
+        font-size: 8rem;
+    }
+}
+
 /*
 @media (width <=768px) {
     header {

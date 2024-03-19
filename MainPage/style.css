@@ -114,8 +114,8 @@ main {
     background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
-    flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
 /* main article:nth-of-type(1) {
@@ -133,10 +133,12 @@ main {
 } */
 
 main article:nth-of-type(1) {
+    display: flex;
+    flex-direction: column;
     padding: 2rem 0.5rem;
     align-items: center;
     justify-items: center;
-    gap: 1rem;
+    gap: 0.5rem;
 }
 
 /* .mainSection {
@@ -201,6 +203,7 @@ main article:nth-of-type(1) {
     border-radius: 6px;
     backdrop-filter: blur(4px);
     padding: 0.5rem 1rem;
+    max-width: 40ch;
 }
 
 
@@ -352,7 +355,7 @@ article:nth-of-type(2) {
 }
 
 .overviewSection>h3 {
-    font-size: 4.5rem;
+    font-size: 4rem;
     color: #bca78b;
     /* text-wrap: nowrap; */
 }
@@ -403,10 +406,13 @@ footer {
     color: rgb(139, 137, 137);
     padding: 2rem 0;
     text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
 }
 
 .footer-content {
-    /* max-width: 800px; */
     margin: 0 auto;
 }
 
@@ -417,7 +423,7 @@ footer {
 .footer-links a {
     color: rgb(119, 181, 179);
     text-decoration: none;
-    margin: 0 1rem;
+    margin: 0 0.5rem;
 }
 
 .footer-links a:hover {
@@ -436,6 +442,89 @@ footer {
 
 .footer-social a:hover {
     text-decoration: underline;
+}
+
+
+
+/* MEDIUM DEVICES i.e TABLETS */
+
+@media (width >=600px) {
+
+    .mainSection {
+        max-width: 95ch;
+        /* background-color: white; */
+    }
+
+    .mainSection>h2 {
+        /* text-align: end; */
+        font-size: 6rem;
+    }
+
+    main article:nth-of-type(2) {}
+}
+
+
+@media (width >=768px) {
+    header {
+        background: rgb(62, 62, 62);
+        background: linear-gradient(90deg, rgb(45, 71, 69) 0%, rgb(62, 62, 62) 61%);
+        padding: 1rem 1.5rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logoContainer {
+        flex-grow: 3;
+    }
+
+    .pages {
+        flex-grow: 1;
+    }
+}
+
+@media (min-width: 1000px) {
+
+    main article:nth-of-type(1) {
+        display: grid !important;
+        grid-template-columns: minmax(1rem, auto), auto, auto, auto, minmax(1rem, auto);
+        grid-template-rows: repeat(4, auto);
+        align-items: center;
+        justify-items: center;
+        gap: 1rem;
+        padding: 2rem 0.5rem;
+    }
+
+    .mainSection {
+        grid-column: 2 / 3;
+        grid-row: 1;
+        max-width: 60ch;
+    }
+
+    .countDown {
+        grid-column: 4;
+        grid-row: 1;
+    }
+
+    article:nth-of-type(2) {
+        display: grid !important;
+        grid-template-columns: minmax(1rem, auto) auto auto minmax(1rem, auto);
+        width: 96%;
+    }
+
+    .overviewSection {
+        grid-column: 2;
+
+    }
+
+    .imagesSection {
+        grid-column: 3;
+    }
+
+    .overviewSection>p {
+        max-width: 60ch;
+    }
 }
 
 /*
